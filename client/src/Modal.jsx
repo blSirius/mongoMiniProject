@@ -51,7 +51,7 @@ function Modals() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/addCartoon', {
+            const response = await axios.post('https://cartoon-server.vercel.app/addCartoon', {
                 cartoonName,
                 cartoonImage
             });

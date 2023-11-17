@@ -13,7 +13,7 @@ function Sidenav() {
 
     const getCartoonNames = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/getCartoonNames');
+            const response = await axios.get('https://cartoon-server.vercel.app/getCartoonNames');
             setCartoonDetail(response.data);
         } catch (error) {
             console.error('Error fetching cartoon names:', error);
@@ -22,7 +22,7 @@ function Sidenav() {
 
     const handleCartoonClick = async (cartoonName) => {
         try {
-            const response = await axios.get(`http://localhost:5000/getCartoonDetails/${cartoonName}`);
+            const response = await axios.get(`https://cartoon-server.vercel.app/getCartoonDetails/${cartoonName}`);
             setSelectedCartoon(response.data);
         } catch (error) {
             console.error('Error fetching cartoon details:', error);
